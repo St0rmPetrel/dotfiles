@@ -3,6 +3,7 @@ require("plugins.lazy")
 require("plugins.treesitter")
 require("plugins.kanagawa")
 require("plugins.telescope")
+require("plugins.tmux")
 -- lsp-plugins
 require("plugins.lsp.null-ls")
 require("plugins.lsp.mason")
