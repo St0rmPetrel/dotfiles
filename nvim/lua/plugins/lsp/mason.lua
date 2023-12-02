@@ -25,7 +25,6 @@ mason_lspconfig.setup({
 	automatic_installation = true, -- not the same as ensure_installed
 })
 
-
 local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status then
 	print("mason_null_ls not found")
@@ -37,7 +36,6 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"stylua", -- lua formatter
 		"goimports",
-		"rustfmt",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

@@ -14,6 +14,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	-- setup formatters & linters
 	sources = {
+		formatting.sqlfluff.with({
+			extra_args = { "--dialect", "clickhouse" }, -- change to your dialect
+		}),
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		formatting.stylua, -- lua formatter

@@ -11,7 +11,7 @@ kanagawa.setup({
 	commentStyle = { italic = false },
 	functionStyle = {},
 	keywordStyle = { italic = false },
-	statementStyle = { bold = true },
+	statementStyle = { bold = false },
 	typeStyle = {},
 	transparent = false, -- do not set background color
 	dimInactive = false, -- dim inactive window `:h hl-NormalNC`
