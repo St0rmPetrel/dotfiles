@@ -1,14 +1,17 @@
--- plugins
-require("plugins.lazy")
-require("plugins.treesitter")
-require("plugins.kanagawa")
-require("plugins.telescope")
-require("plugins.tmux")
--- lsp-plugins
-require("plugins.lsp.null-ls")
-require("plugins.lsp.mason")
-require("plugins.lsp.lspconfig")
-require("plugins.nvim-cmp")
-
 require("options")
 require("keymaps")
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup("plugins")

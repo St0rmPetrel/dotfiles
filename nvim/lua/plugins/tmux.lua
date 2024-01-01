@@ -1,7 +1,6 @@
-local tmux_status, tmux = pcall(require, "tmux")
-if not tmux_status then
-	print("tumx not found")
-	return
-end
-
-tmux.setup()
+return {
+	"aserowy/tmux.nvim",
+	config = function()
+		require("tmux").setup()
+	end,
+}
