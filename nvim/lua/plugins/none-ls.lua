@@ -14,7 +14,7 @@ return {
 
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		vim.api.nvim_create_autocmd("BufWritePost", {
-			pattern = { "*.go", "*.lua" },
+			pattern = { "*.go", "*.lua", "*.rs" },
 			callback = function()
 				vim.lsp.buf.format()
 			end,
