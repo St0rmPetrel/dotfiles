@@ -1,6 +1,15 @@
-window.option_as_alt = "Both"
+[shell]
+program = "/bin/zsh"
+args = [
+"-l",
+"-c",
+"/opt/homebrew/bin/zellij attach home || /opt/homebrew/bin/zellij -s home"
+]
 
-font.size = 16
-font.normal.family = "GoMono Nerd Font"
+[window]
+option_as_alt = "Both"
+startup_mode="Fullscreen"
 
-window.startup_mode="Fullscreen"
+[font]
+size = 18
+normal.family = "GoMono Nerd Font"
